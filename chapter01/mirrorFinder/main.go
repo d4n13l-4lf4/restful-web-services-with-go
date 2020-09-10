@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/d4n13l-4lf4/RESTful Web Services with Go/chapter01/mirrors"
+	"github.com/d4n13l-4lf4/restful-web-services-with-go/chapter01/mirrors"
 	"log"
 	"net/http"
 	"time"
@@ -16,7 +16,7 @@ type response struct {
 
 func main() {
 
-	http.HandleFunc("/fatest-mirror", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/fastest-mirror", func(w http.ResponseWriter, r *http.Request) {
 		response := findFastest(mirrors.MirrorList[:])
 		respJSON, _ := json.Marshal(response)
 		w.Header().Set("Content-Type", "application/json")
@@ -31,7 +31,7 @@ func main() {
 		WriteTimeout: 10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	fmt.Printf("Starting server on port %sn", port)
+	fmt.Printf("Starting server on port %s\n", port)
 	log.Fatal(server.ListenAndServe())
 }
 
