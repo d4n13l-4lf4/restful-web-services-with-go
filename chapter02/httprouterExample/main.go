@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/julienschmidt/httprouter"
 	"io"
 	"log"
 	"net/http"
 	"os/exec"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 func getCommandOutput(command string, arguments ...string) string {
@@ -33,4 +34,3 @@ func main() {
 	router.GET("/api/v1/show-file/:name", getFileContent)
 	log.Fatal(http.ListenAndServe(":8000", router))
 }
-
