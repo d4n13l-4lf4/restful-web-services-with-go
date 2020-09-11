@@ -38,7 +38,7 @@ func CreateStation(c *gin.Context) {
 
 	if err := c.BindJSON(&station); err == nil {
 		statement, _ := DB.Prepare(dbutils.INSERT_STATION)
-		result, _ := statement.Exec(station.Name, station.OpeningTime, station.ClosingTime)
+		result, err := statement.Exec(station.Name, station.OpeningTime, station.ClosingTime)
 		if err == nil {
 			newID, _ := result.LastInsertId()
 			station.ID = int(newID)
