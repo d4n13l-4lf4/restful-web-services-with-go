@@ -2,3 +2,4 @@
 
 - Protocol Buffers
 - gRPC
+- gRPC streaming
