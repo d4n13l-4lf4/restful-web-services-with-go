@@ -19,3 +19,4 @@ vendor/
 **/routes/
 **/public
 *.pb.go
+chapter07/basicExample/.env
