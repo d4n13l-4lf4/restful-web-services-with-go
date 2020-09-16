@@ -22,3 +22,4 @@ vendor/
 *.pb.go
 *.env
 *.mod
+*.txt
