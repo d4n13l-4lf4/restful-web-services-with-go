@@ -1,4 +1,5 @@
 # Scaling our REST API using Microservices
 
-- Basic string encryption with AES CFB
-- Basic microservice for string encryption
+- A basic string encryption with AES CFB
+- A basic microservice for string encryption
+- A basic Event Driven Architecture
