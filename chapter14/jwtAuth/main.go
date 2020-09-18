@@ -48,8 +48,8 @@ func Healthcheck(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	r := mux.NewRouter()
-	r.HandleFunc("/getToken", GetToken)
-	r.HandleFunc("/healthcheck", auth.Middleware(Healthcheck))
+	r.HandleFunc("/token", GetToken).Methods("POST")
+	r.HandleFunc("/healthcheck", auth.Middleware(Healthcheck)).Methods("GET")
 
 	srv := &http.Server{
 		Handler: r,
