@@ -23,5 +23,7 @@ vendor/
 *.micro.go
 *.env
 *.mod
+*.sum
 *.txt
 *.log
+.terraform
